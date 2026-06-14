@@ -1,0 +1,9 @@
+[
+  {
+    "op": "add",
+    "path": "/indicators/pat_throwesther",
+    "value": {
+      "image": "/pat/throwesther/quest.questtemplate:indicatorAnim"
+    }
+  }
+]

@@ -1,0 +1,27 @@
+{
+  "id": "pat_throwesther",
+  "title": "throw esther",
+  "text": ":3",
+
+  "showAcceptDialog": false,
+  "showCompleteDialog": false,
+  "showFailDialog": false,
+  "canBeAbandoned": false,
+  "showInLog": false,
+
+  "questGiverIndicator": "pat_throwesther", //  quests/quests.config:indicators.pat_throwesther
+  "questReceiverIndicator": "pat_throwesther", 
+  "indicatorAnim": {
+    "frames": "/projectiles/invisibleprojectile/invisibleprojectile.png",
+    "color": "clear",
+    "animationCycle": 0
+  },
+
+  "rewards": [ ],
+  "moneyRange": [ 0, 0 ],
+
+  "updateDelta": 0,
+  "script": "/pat/throwesther/quest.lua",
+  "scriptConfig": {
+  }
+}
