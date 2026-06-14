@@ -18,7 +18,7 @@
           "esther": {
             "idle": {
               "properties": {
-                "image": "esther.png:<frameIndex>",
+                "image": "/pat/throwesther/esther.png:<frameIndex>",
                 "offset": [ 1.5, 0.5 ],
                 "transformationGroups": [ "esther" ]
               }

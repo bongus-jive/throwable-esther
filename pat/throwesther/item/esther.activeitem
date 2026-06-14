@@ -4,6 +4,9 @@
   "description": "",
   "category": "throwableItem",
   "inventoryIcon": "icon.png",
+  "tooltipFields": {
+    "objectImage": "/pat/throwesther/esther.png:0"
+  },
   "rarity": "common",
   "maxStack": 1,
   "twoHanded": true,
