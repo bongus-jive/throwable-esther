@@ -1,0 +1,12 @@
+{
+  "itemName": "pat_throwesther",
+  "shortdescription": "Esther Bright",
+  "description": "",
+  "category": "throwableItem",
+  "inventoryIcon": "icon.png",
+  "rarity": "common",
+  "maxStack": 1,
+  "twoHanded": true,
+  "animation": "esther.animation",
+  "scripts": [ "esther.lua" ]
+}

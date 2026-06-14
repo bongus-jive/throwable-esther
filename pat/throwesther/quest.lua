@@ -1,13 +1,11 @@
 function init()
   quest.fail()
 
-  local questGiver = quest.parameters().questGiver
-
-  local giverId = findGiver(questGiver)
+  local giverId = findGiver(quest.parameters().questGiver)
   if not giverId then return end
 
   world.sendEntityMessage(giverId, "applyStatusEffect", "pat_throwesther_despawn")
-  giveItem(questGiver.portrait)
+  giveItem()
 end
 
 function findGiver(data)
@@ -23,12 +21,10 @@ function findGiver(data)
   end
 end
 
-function giveItem(portrait)
+function giveItem()
   local swap = player.swapSlotItem()
+  player.setSwapSlotItem("pat_throwesther")
   if swap then
     world.spawnItem(swap, entity.position(), nil, nil, nil, root.assetJson("/itemdrop.config:throwIntangibleTime"))
   end
-
-  local item = { name = "egg", count = 1, parameters = { inventoryIcon = portrait } }
-  player.setSwapSlotItem(item)
 end

@@ -1,0 +1,34 @@
+{
+  "animatedParts": {
+    "stateTypes": {
+      "esther": {
+        "default": "idle",
+        "states": {
+          "idle": {
+            "frames": 6,
+            "cycle": 1.5,
+            "mode": "loop"
+          }
+        }
+      }
+    },
+    "parts": {
+      "esther": {
+        "partStates": {
+          "esther": {
+            "idle": {
+              "properties": {
+                "image": "esther.png:<frameIndex>",
+                "offset": [ 1.5, 0.5 ],
+                "transformationGroups": [ "esther" ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "transformationGroups": {
+    "esther": { }
+  }
+}
