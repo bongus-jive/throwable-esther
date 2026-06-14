@@ -20,6 +20,7 @@
               "properties": {
                 "image": "/pat/throwesther/esther.png:<frameIndex>",
                 "offset": [ 1.5, 0.5 ],
+                "projectileOffset": [ 1, 1 ],
                 "transformationGroups": [ "esther" ]
               }
             }
@@ -30,5 +31,8 @@
   },
   "transformationGroups": {
     "esther": { }
+  },
+  "sounds": {
+    "throw": [ "/sfx/projectiles/throw_item_big.ogg" ]
   }
 }

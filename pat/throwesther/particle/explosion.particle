@@ -1,0 +1,20 @@
+{
+  "kind": "pat_throwesther_explosion",
+  "definition": {
+    "type": "animated",
+    "animation": "/pat/throwesther/particle/explosion.particle:animation",
+    "layer": "front",
+    "light": [ 255, 160, 70 ],
+    "fade": 2,
+    "size": 0.75,
+    "timeToLive": 1,
+    "fullbright": true,
+    "collidesForeground": false
+  },
+  "animation": {
+    "frames": "explosion.png",
+    "mode": "EndAndDisappear",
+    "frameNumber": 9,
+    "animationCycle": 0.6
+  }
+}
