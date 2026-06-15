@@ -10,7 +10,7 @@
     "gravityMultiplier": 1,
     "airFriction": 1,
     "stopOnFirstBounce": true,
-    "collisionPoly": [ [ -0.375, -0.375 ], [ 0.375, -0.375 ], [ 0.375, 0.375 ], [ -0.375, 0.375 ] ]
+    "collisionPoly": [ [ 1, 0 ], [ 0, 1 ], [ -1, 0 ], [ 0, -1 ] ]
   },
   "actionOnReap": [
     { "action": "particle", "specification": "pat_throwesther_explosion" },
