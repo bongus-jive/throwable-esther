@@ -10,12 +10,8 @@
   "showInLog": false,
 
   "questGiverIndicator": "pat_throwesther", //  quests/quests.config:indicators.pat_throwesther
-  "questReceiverIndicator": "pat_throwesther", 
-  "indicatorAnim": {
-    "frames": "/projectiles/invisibleprojectile/invisibleprojectile.png",
-    "color": "clear",
-    "animationCycle": 0
-  },
+  "questReceiverIndicator": "pat_throwesther",
+  "indicatorAnim": { },
 
   "rewards": [ ],
   "moneyRange": [ 0, 0 ],
