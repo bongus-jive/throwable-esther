@@ -5,7 +5,7 @@
     "animation": "/pat/throwesther/particle/explosion.particle:animation",
     "layer": "front",
     "light": [ 255, 160, 70 ],
-    "fade": 2,
+    "fade": 5,
     "size": 0.75,
     "timeToLive": 1,
     "fullbright": true,
@@ -15,6 +15,6 @@
     "frames": "explosion.png",
     "mode": "EndAndDisappear",
     "frameNumber": 9,
-    "animationCycle": 0.6
+    "animationCycle": 0.75
   }
 }

@@ -14,6 +14,6 @@
   },
   "actionOnReap": [
     { "action": "particle", "specification": "pat_throwesther_explosion" },
-    { "action": "sound", "options": [ "/pat/throwesther/sfx/explode3.ogg", "/pat/throwesther/sfx/explode4.ogg", "/pat/throwesther/sfx/explode5.ogg" ] }
+    { "action": "sound", "options": [ "/pat/throwesther/sfx/explosion.ogg" ] }
   ]
 }
