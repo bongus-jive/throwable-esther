@@ -13,7 +13,7 @@
   "moneyRange": [ 0, 0 ],
 
   "updateDelta": 0,
-  "script": "/pat/throwablenpcs/quest.lua",
+  "script": "/pat/throwablenpcs/quest/quest.lua",
   "scriptConfig": {
     "nameTemplate": "Throwable %s"
   }
