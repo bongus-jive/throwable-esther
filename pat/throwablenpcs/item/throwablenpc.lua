@@ -68,6 +68,7 @@ function spawnProjectile()
 
   world.spawnVehicle("pat_thrownnpc", pos, {
     direction = vec,
+    startVelocity = mcontroller.velocity(),
     sourceId = activeItem.ownerEntityId(),
     animationCustom = anim
   })

@@ -11,10 +11,14 @@ end
 function spawned()
   storage.initialized = true
 
-  local speed = config.getParameter("speed", 50)
   local dir = config.getParameter("direction", {0, 0})
-  mcontroller.setVelocity(vec2.mul(dir, speed))
   setRotation(vec2.angle(dir))
+  
+  local speed = config.getParameter("speed", 50)
+  local vel = vec2.mul(dir, speed)
+  local startVel = config.getParameter("startVelocity")
+  if startVel then vel = vec2.add(vel, startVel) end
+  mcontroller.setVelocity(vel)
 
   storage.timeToLive = config.getParameter("timeToLive", 5)
 end
