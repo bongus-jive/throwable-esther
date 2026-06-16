@@ -7,5 +7,8 @@
   "maxStack": 1,
   "twoHanded": true,
   "animation": "throwablenpc.animation",
-  "scripts": [ "throwablenpc.lua" ]
+  "scripts": [ "throwablenpc.lua" ],
+
+  "projectileOffset": [ 1, 1 ],
+  "baseOffset": [ -1, 0 ]
 }

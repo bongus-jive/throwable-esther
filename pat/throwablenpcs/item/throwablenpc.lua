@@ -5,7 +5,12 @@ require "/pat/throwablenpcs/transforms.lua"
 function init()
   initTransforms()
 
-  self.rotationCenter = config.getParameter("rotationCenter")
+  local offset = config.getParameter("baseOffset")
+  local hand = config.getParameter("handOffset")
+  if hand then offset = vec2.add(offset, hand) end
+  animator.resetTransformationGroup("main")
+  animator.translateTransformationGroup("main", offset)
+
   self.fsm = FSM:new()
   reset()
 end
@@ -46,37 +51,28 @@ function rotate(duration, armStart, armEnd, rotStart, rotEnd)
     local rot = math.rad(util.interpolateSigmoid(t, rotStart, rotEnd))
 
     activeItem.setArmAngle(arm)
-    animator.resetTransformationGroup("main")
-    animator.rotateTransformationGroup("main", rot, self.rotationCenter)
+    animator.rotateGroup("rotation", rot)
 
     coroutine.yield()
   end
 end
 
 function spawnProjectile()
-  local offset = {0, 0}--animator.partProperty("esther", "projectileOffset")
+  local offset = config.getParameter("projectileOffset")
   local pos = vec2.add(mcontroller.position(), activeItem.handPosition(offset))
   local angle = activeItem.aimAngle(0.25, activeItem.ownerAimPosition())
   local vec = { math.cos(angle), math.sin(angle) }
-
-  local anim = config.getParameter("animationCustom")
-  if anim and anim.animatedParts and anim.animatedParts.parts then
-    for _, part in pairs(anim.animatedParts.parts) do
-      part.properties.offset = part.properties.vehicleOffset or part.properties.offset
-    end
-  end
 
   world.spawnVehicle("pat_thrownnpc", pos, {
     direction = vec,
     startVelocity = mcontroller.velocity(),
     sourceId = activeItem.ownerEntityId(),
-    animationCustom = anim
+    animationCustom = config.getParameter("animationCustom")
   })
 end
 
 function reset()
   self.fsm:set()
   activeItem.setArmAngle(math.rad(60))
-  animator.resetTransformationGroup("main")
-  animator.rotateTransformationGroup("main", math.rad(-12), self.rotationCenter)
+  animator.rotateGroup("rotation", math.rad(-12))
 end
