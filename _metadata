@@ -1,0 +1,7 @@
+{
+  "author" : "patman",
+  "description" : "pick up esther and throw her",
+  "friendlyName" : "throwable esther",
+  "name" : "pat_throwesther",
+  "version" : "0.1"
+}
