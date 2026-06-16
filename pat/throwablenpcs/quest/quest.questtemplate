@@ -14,7 +14,5 @@
 
   "updateDelta": 0,
   "script": "/pat/throwablenpcs/quest/quest.lua",
-  "scriptConfig": {
-    "nameTemplate": "Throwable %s"
-  }
+  "scriptConfig": { }
 }

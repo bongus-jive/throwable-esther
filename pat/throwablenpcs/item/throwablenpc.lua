@@ -5,9 +5,7 @@ require "/pat/throwablenpcs/transforms.lua"
 function init()
   initTransforms()
 
-  local offset = config.getParameter("baseOffset")
-  local hand = config.getParameter("handOffset")
-  if hand then offset = vec2.add(offset, hand) end
+  local offset = config.getParameter("handOffset")
   animator.resetTransformationGroup("main")
   animator.translateTransformationGroup("main", offset)
 

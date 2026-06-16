@@ -10,5 +10,7 @@
   "scripts": [ "throwablenpc.lua" ],
 
   "projectileOffset": [ 1, 1 ],
-  "baseOffset": [ -1, 0.75 ]
+  "handOffset": [ -1, 0.75 ],
+  "nameTemplate": "Throwable %s",
+  "builder": "/pat/throwablenpcs/item/builder.lua"
 }
