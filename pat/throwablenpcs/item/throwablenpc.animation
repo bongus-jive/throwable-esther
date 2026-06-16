@@ -3,7 +3,7 @@
     "main": { }
   },
   "rotationGroups": {
-    "rotation": {}
+    "rotation": { }
   },
   "sounds": {
     "throw": [ "/sfx/projectiles/throw_item_big.ogg" ]
