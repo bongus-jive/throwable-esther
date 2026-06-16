@@ -25,18 +25,11 @@ end
 
 function update(dt)
   storage.timeToLive = storage.timeToLive - dt
-  if storage.timeToLive < 0 then
+  
+  if storage.timeToLive < 0
+  or mcontroller.atWorldLimit()
+  or mcontroller.isColliding() and (mcontroller.isNullColliding() or not mcontroller.stickingDirection()) then
     destroy()
-  end
-
-  if mcontroller.atWorldLimit() then
-    destroy()
-  end
-
-  if mcontroller.isColliding() then
-    if mcontroller.isNullColliding() or not mcontroller.stickingDirection() then
-      destroy()
-    end
   end
 
   local vel = mcontroller.velocity()
