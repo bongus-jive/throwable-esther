@@ -10,5 +10,5 @@
   "scripts": [ "throwablenpc.lua" ],
 
   "projectileOffset": [ 1, 1 ],
-  "baseOffset": [ -1, 0 ]
+  "baseOffset": [ -1, 0.75 ]
 }

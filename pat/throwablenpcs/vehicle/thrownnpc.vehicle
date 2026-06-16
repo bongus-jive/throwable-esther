@@ -11,10 +11,10 @@
     "physicsEffectCategories": [ "projectile" ],
     "gravityMultiplier": 1,
     "airFriction": 0.5,
-    "liquidFriction" : 5,
-    "groundFriction" : 14,
+    "liquidFriction": 5,
+    "groundFriction": 14,
     "collisionPoly": [ [ 1, 0 ], [ 0, 1 ], [ -1, 0 ], [ 0, -1 ] ],
-    "ignorePlatformCollision" : true
+    "ignorePlatformCollision": true
   },
 
   "speed": 67,
