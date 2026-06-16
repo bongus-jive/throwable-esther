@@ -1,0 +1,16 @@
+{
+  "transformationGroups": {
+    "main": { }
+  },
+  "rotationGroups": {
+    "rotation": { }
+  },
+  "particleEmitters": {
+    "explode": {
+      "particles": [ { "particle": "pat_throwesther_explosion" } ]
+    }
+  },
+  "sounds": {
+    "explode": [ "/pat/throwesther/sfx/explosion.ogg" ]
+  }
+}

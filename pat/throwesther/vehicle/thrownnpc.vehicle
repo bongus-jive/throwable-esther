@@ -1,0 +1,25 @@
+{
+  "name": "pat_thrownnpc",
+  "clientEntityMode": "ClientMasterAllowed",
+  "boundBox": [ -5, -5, 5, 5 ],
+  "slaveControlTimeout": 0,
+  "slaveControlHeartbeat": 67,
+  "persistent": false,
+  "interactive": false,
+
+  "movementSettings": {
+    "physicsEffectCategories": [ "projectile" ],
+    "gravityMultiplier": 1,
+    "airFriction": 0.5,
+    "liquidFriction" : 5,
+    "groundFriction" : 14,
+    "collisionPoly": [ [ 1, 0 ], [ 0, 1 ], [ -1, 0 ], [ 0, -1 ] ],
+    "ignorePlatformCollision" : true
+  },
+
+  "speed": 67,
+  "timeToLive": 5,
+
+  "animation": "thrownnpc.animation",
+  "script": "thrownnpc.lua"
+}

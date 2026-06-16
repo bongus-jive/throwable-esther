@@ -2,6 +2,14 @@ require "/scripts/util.lua"
 require "/scripts/vec2.lua"
 
 function init()
+  for i = 1, config.getParameter("animationPartCount", 0) do
+    local k = tostring(i)
+    local mat = animator.partProperty(k, "transformation")
+    animator.resetTransformationGroup(k)
+    animator.transformTransformationGroup(k, mat[1][1], mat[1][2], mat[2][1], mat[2][2], mat[1][3] / 8, mat[2][3] / 8)
+  end
+
+  self.rotationCenter = config.getParameter("rotationCenter")
   self.fsm = FSM:new()
   reset()
 end
@@ -42,24 +50,37 @@ function rotate(duration, armStart, armEnd, rotStart, rotEnd)
     local rot = math.rad(util.interpolateSigmoid(t, rotStart, rotEnd))
 
     activeItem.setArmAngle(arm)
-    animator.resetTransformationGroup("esther")
-    animator.rotateTransformationGroup("esther", rot)
+    animator.resetTransformationGroup("main")
+    animator.rotateTransformationGroup("main", rot, self.rotationCenter)
 
     coroutine.yield()
   end
 end
 
 function spawnProjectile()
-  local offset = animator.partProperty("esther", "projectileOffset")
+  local offset = {0, 0}--animator.partProperty("esther", "projectileOffset")
   local pos = vec2.add(mcontroller.position(), activeItem.handPosition(offset))
   local angle = activeItem.aimAngle(0.25, activeItem.ownerAimPosition())
   local vec = { math.cos(angle), math.sin(angle) }
-  world.spawnProjectile("pat_throwesther", pos, activeItem.ownerEntityId(), vec)
+
+  local anim = config.getParameter("animationCustom")
+  if anim and anim.animatedParts and anim.animatedParts.parts then
+    for _, part in pairs(anim.animatedParts.parts) do
+      part.properties.offset = part.properties.vehicleOffset or part.properties.offset
+    end
+  end
+
+  world.spawnVehicle("pat_thrownnpc", pos, {
+    direction = vec,
+    sourceId = activeItem.ownerEntityId(),
+    animationCustom = anim
+  })
+  -- world.spawnProjectile("pat_throwesther", pos, activeItem.ownerEntityId(), vec)
 end
 
 function reset()
   self.fsm:set()
   activeItem.setArmAngle(math.rad(60))
-  animator.resetTransformationGroup("esther")
-  animator.rotateTransformationGroup("esther", math.rad(-12))
+  animator.resetTransformationGroup("main")
+  animator.rotateTransformationGroup("main", math.rad(-12), self.rotationCenter)
 end

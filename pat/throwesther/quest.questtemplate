@@ -7,7 +7,7 @@
   "showCompleteDialog": false,
   "showFailDialog": false,
   "canBeAbandoned": false,
-  "showInLog": false,
+  "showInLog": true,
 
   "questGiverIndicator": "pat_throwesther", //  quests/quests.config:indicators.pat_throwesther
   "questReceiverIndicator": "pat_throwesther",

@@ -1,36 +1,9 @@
 {
-  "animatedParts": {
-    "stateTypes": {
-      "esther": {
-        "default": "idle",
-        "states": {
-          "idle": {
-            "frames": 6,
-            "cycle": 1.5,
-            "mode": "loop"
-          }
-        }
-      }
-    },
-    "parts": {
-      "esther": {
-        "partStates": {
-          "esther": {
-            "idle": {
-              "properties": {
-                "image": "/pat/throwesther/esther.png:<frameIndex>",
-                "offset": [ 1.5, 0.5 ],
-                "projectileOffset": [ 1, 1 ],
-                "transformationGroups": [ "esther" ]
-              }
-            }
-          }
-        }
-      }
-    }
-  },
   "transformationGroups": {
-    "esther": { }
+    "main": { }
+  },
+  "rotationGroups": {
+    "rotation": {}
   },
   "sounds": {
     "throw": [ "/sfx/projectiles/throw_item_big.ogg" ]
