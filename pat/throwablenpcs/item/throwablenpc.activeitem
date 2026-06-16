@@ -1,11 +1,11 @@
 {
-  "itemName": "pat_throwesther",
+  "itemName": "pat_throwablenpc",
   "shortdescription": "Throwable NPC",
   "description": "",
   "category": "throwableItem",
   "rarity": "common",
   "maxStack": 1,
   "twoHanded": true,
-  "animation": "esther.animation",
-  "scripts": [ "esther.lua" ]
+  "animation": "throwablenpc.animation",
+  "scripts": [ "throwablenpc.lua" ]
 }

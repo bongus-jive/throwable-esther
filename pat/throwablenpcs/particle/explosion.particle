@@ -1,8 +1,8 @@
 {
-  "kind": "pat_throwesther_explosion",
+  "kind": "pat_throwablenpc_explosion",
   "definition": {
     "type": "animated",
-    "animation": "/pat/throwesther/particle/explosion.particle:animation",
+    "animation": "/pat/throwablenpcs/particle/explosion.particle:animation",
     "layer": "front",
     "light": [ 255, 160, 70 ],
     "fade": 5,

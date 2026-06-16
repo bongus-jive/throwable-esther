@@ -1,6 +1,6 @@
 {
-  "id": "pat_throwesther",
-  "title": "throw esther",
+  "id": "pat_throwablenpc",
+  "title": "throw npcs",
   "text": ":3",
 
   "showAcceptDialog": false,
@@ -13,7 +13,7 @@
   "moneyRange": [ 0, 0 ],
 
   "updateDelta": 0,
-  "script": "/pat/throwesther/quest.lua",
+  "script": "/pat/throwablenpcs/quest.lua",
   "scriptConfig": {
   }
 }

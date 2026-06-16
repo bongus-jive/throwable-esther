@@ -1,0 +1,4 @@
+{
+  "name": "pat_throwablenpc_despawn",
+  "scripts": [ "despawn.lua" ]
+}

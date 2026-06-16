@@ -1,7 +1,7 @@
 local worldId
 
 function init()
-  worldId = ("InstanceWorld:pat_throwesther:%s:-"):format(sb.makeUuid())
+  worldId = ("InstanceWorld:pat_throwablenpc:%s:-"):format(sb.makeUuid())
   quest.setWorldId(worldId)
 end
 
@@ -18,14 +18,14 @@ function questInteract(id)
     animationCustom = makeAnimationCustom(portrait)
   })
 
-  world.sendEntityMessage(id, "applyStatusEffect", "pat_throwesther_despawn")
+  world.sendEntityMessage(id, "applyStatusEffect", "pat_throwablenpc_despawn")
 
   return true
 end
 
 function giveItem(params)
   local swap = player.swapSlotItem()
-  player.setSwapSlotItem({ "pat_throwesther", 1, params })
+  player.setSwapSlotItem({ "pat_throwablenpc", 1, params })
   if swap then
     world.spawnItem(swap, entity.position(), nil, nil, nil, root.assetJson("/itemdrop.config:throwIntangibleTime"))
   end

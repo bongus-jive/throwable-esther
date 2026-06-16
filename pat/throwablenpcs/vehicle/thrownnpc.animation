@@ -7,10 +7,10 @@
   },
   "particleEmitters": {
     "explode": {
-      "particles": [ { "particle": "pat_throwesther_explosion" } ]
+      "particles": [ { "particle": "pat_throwablenpc_explosion" } ]
     }
   },
   "sounds": {
-    "explode": [ "/pat/throwesther/sfx/explosion.ogg" ]
+    "explode": [ "/pat/throwablenpcs/sfx/explosion.ogg" ]
   }
 }

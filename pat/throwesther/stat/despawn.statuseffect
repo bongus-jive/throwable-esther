@@ -1,4 +1,0 @@
-{
-  "name": "pat_throwesther_despawn",
-  "scripts": [ "despawn.lua" ]
-}

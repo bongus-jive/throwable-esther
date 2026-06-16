@@ -75,7 +75,6 @@ function spawnProjectile()
     sourceId = activeItem.ownerEntityId(),
     animationCustom = anim
   })
-  -- world.spawnProjectile("pat_throwesther", pos, activeItem.ownerEntityId(), vec)
 end
 
 function reset()
