@@ -44,7 +44,7 @@ end
 function makeAnimationCustom(drawables)
   local parts, tgroups = {}, {}
   local size = { 0, 0 }
-  handOffset = 0
+  local handOffset = 0
 
   for i, draw in ipairs(drawables) do
     local props = {}
@@ -84,7 +84,6 @@ function makeAnimationCustom(drawables)
 
   return {
     animatedParts = { parts = parts },
-    transformationGroups = tgroups,
-    rotationCenter = size
+    transformationGroups = tgroups
   }
 end
