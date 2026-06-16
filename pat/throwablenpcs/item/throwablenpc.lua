@@ -1,13 +1,9 @@
 require "/scripts/util.lua"
 require "/scripts/vec2.lua"
+require "/pat/throwablenpcs/transforms.lua"
 
 function init()
-  for i = 1, config.getParameter("animationPartCount", 0) do
-    local k = tostring(i)
-    local mat = animator.partProperty(k, "transformation")
-    animator.resetTransformationGroup(k)
-    animator.transformTransformationGroup(k, mat[1][1], mat[1][2], mat[2][1], mat[2][2], mat[1][3] / 8, mat[2][3] / 8)
-  end
+  initTransforms()
 
   self.rotationCenter = config.getParameter("rotationCenter")
   self.fsm = FSM:new()

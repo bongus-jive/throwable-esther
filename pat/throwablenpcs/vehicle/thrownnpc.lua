@@ -1,6 +1,9 @@
 require "/scripts/vec2.lua"
+require "/pat/throwablenpcs/transforms.lua"
 
 function init()
+  initTransforms()
+
   if not storage.initialized then spawned() end
   self.flippable = config.getParameter("flippable", true)
 end

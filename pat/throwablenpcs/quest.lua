@@ -43,7 +43,7 @@ end
 
 function makeAnimationCustom(drawables)
   local parts, tgroups = {}, {}
-  local size = { 0, 0 }
+  local width = 0
   local handOffset = 0
 
   for i, draw in ipairs(drawables) do
@@ -65,21 +65,17 @@ function makeAnimationCustom(drawables)
     end
 
     local s = root.imageSize(draw.image)
-    if s[1] > size[1] or s[2] > size[2] then size = s end
+    if s[1] > width then width = s[1] end
 
     local rect = root.nonEmptyRegion(draw.image)
     if rect[1] > handOffset then handOffset = rect[1] end
   end
 
-  local xOffset, yOffset = size[1] / 16, size[2] / 16
-  handOffset = (xOffset - (handOffset / 8)) / 2
+  handOffset = ((width / 16) - (handOffset / 8)) / 2
   for _, part in pairs(parts) do
     local pp = part.properties
-    pp.offset[1] = pp.offset[1] + handOffset
-    pp.vehicleOffset = {
-      pp.offset[1] - xOffset,
-      pp.offset[2] - yOffset
-    }
+    pp.vehicleOffset = pp.offset
+    pp.offset = {pp.offset[1] + handOffset, pp.offset[2]}
   end
 
   return {
