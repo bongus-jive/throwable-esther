@@ -3,11 +3,8 @@ require "/scripts/vec2.lua"
 require "/pat/throwablenpcs/transforms.lua"
 
 function init()
-  initTransforms()
-
   local offset = config.getParameter("handOffset")
-  animator.resetTransformationGroup("main")
-  animator.translateTransformationGroup("main", offset)
+  initTransforms(offset)
 
   self.stances = config.getParameter("stances")
   for _, v in pairs(self.stances) do

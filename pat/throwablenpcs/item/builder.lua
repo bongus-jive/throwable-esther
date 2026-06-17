@@ -14,7 +14,7 @@ function build(_, config, parameters)
 end
 
 function drawablesToAnimation(drawables)
-  local parts, tgroups = {}, { main = {} }
+  local parts, tgroups = {}, {}
 
   for i, draw in ipairs(drawables) do
     local props = {}
@@ -25,7 +25,7 @@ function drawablesToAnimation(drawables)
     props.offset = { draw.position[1] / 8, draw.position[2] / 8 }
     props.centered = draw.centered or false
     props.fullbright = draw.fullbright or false
-    props.transformationGroups = { k, "main" }
+    props.transformationGroups = { k }
     props.rotationGroup = "rotation"
 
     local t = draw.transformation
