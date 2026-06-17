@@ -25,7 +25,7 @@ end
 
 function getPortrait(id)
   local portrait = {}
-  for _, draw in ipairs(world.entityPortrait(id, "fullneutral")) do
+  for _, draw in ipairs(world.entityPortrait(id, "full")) do
     if draw.image and root.nonEmptyRegion(draw.image) then
       portrait[#portrait + 1] = draw
     end
