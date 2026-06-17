@@ -49,7 +49,7 @@ function getHandOffset(drawables)
     local rect = root.nonEmptyRegion(draw.image)
     if rect then
       local size = root.imageSize(draw.image)
-      local x = (size[1] / 2) - rect[1]
+      local x = ((size[1] / 2) - rect[1]) * math.abs(draw.transformation[1][1])
       if x > handX then handX = x end
     end
   end
