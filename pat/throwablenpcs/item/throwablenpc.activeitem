@@ -9,6 +9,11 @@
   "animation": "throwablenpc.animation",
   "scripts": [ "throwablenpc.lua" ],
 
+  "stances": [
+    { "arm": 60, "item": -12, "time": 0.3 },
+    { "arm": 140, "item": -36, "time": 0 },
+    { "arm": 30, "item": 0, "time": 0.04 }
+  ],
   "projectileOffset": [ 1, 1 ],
   "handOffset": [ -1, 0.75 ],
   "nameTemplate": "Throwable %s",

@@ -9,6 +9,11 @@ function init()
   animator.resetTransformationGroup("main")
   animator.translateTransformationGroup("main", offset)
 
+  self.stances = config.getParameter("stances")
+  for _, v in pairs(self.stances) do
+    v.arm, v.item = math.rad(v.arm), math.rad(v.item)
+  end
+
   self.fsm = FSM:new()
   reset()
 end
@@ -24,7 +29,7 @@ function update(dt, fireMode)
 end
 
 function throw()
-  rotate(0.5, 60, 140, -12, -36)
+  rotate(self.stances[1], self.stances[2])
 
   util.wait(0.04)
   while activeItem.fireMode() == "primary" do
@@ -32,21 +37,21 @@ function throw()
   end
 
   animator.playSound("throw")
-  rotate(0.03, 140, 45, -36, 0)
+  rotate(self.stances[2], self.stances[3])
   spawnProjectile()
   item.consume(1)
 
-  rotate(0.2, 45, 60, 0, -12)
+  rotate(self.stances[3], self.stances[1])
   reset()
 end
 
-function rotate(duration, armStart, armEnd, rotStart, rotEnd)
+function rotate(from, to)
   local t = 0
   while t < 1 do
-    t = math.min(1, t + (script.updateDt() / duration))
+    t = math.min(1, t + (script.updateDt() / to.time))
 
-    local arm = math.rad(util.interpolateSigmoid(t, armStart, armEnd))
-    local rot = math.rad(util.interpolateSigmoid(t, rotStart, rotEnd))
+    local arm = util.interpolateSigmoid(t, from.arm, to.arm)
+    local rot = util.interpolateSigmoid(t, from.item, to.item)
 
     activeItem.setArmAngle(arm)
     animator.rotateGroup("rotation", rot)
@@ -71,6 +76,6 @@ end
 
 function reset()
   self.fsm:set()
-  activeItem.setArmAngle(math.rad(60))
-  animator.rotateGroup("rotation", math.rad(-12))
+  activeItem.setArmAngle(self.stances[1].arm)
+  animator.rotateGroup("rotation", self.stances[1].item)
 end
