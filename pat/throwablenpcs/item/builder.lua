@@ -22,7 +22,7 @@ function drawablesToAnimation(drawables)
     parts[k], tgroups[k] = { properties = props }, {}
 
     props.image = draw.image
-    props.offset = draw.position
+    props.offset = { draw.position[1] / 8, draw.position[2] / 8 }
     props.centered = draw.centered or false
     props.fullbright = draw.fullbright or false
     props.transformationGroups = { k, "main" }
