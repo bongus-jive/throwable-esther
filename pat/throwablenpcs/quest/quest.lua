@@ -7,7 +7,8 @@ end
 
 function questInteract(id)
   if player.currentQuestWorld() ~= worldId then return end
-  if world.entityType(id) ~= "npc" then return end
+  local t = world.entityType(id)
+  if not (t == "npc" or t == "monster") then return end
 
   local portrait = getPortrait(id)
   if not portrait then return end
