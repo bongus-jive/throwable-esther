@@ -9,7 +9,10 @@ function questInteract(id)
   if player.currentQuestWorld() ~= worldId then return end
   if world.entityType(id) ~= "npc" then return end
 
-  giveItem({ npcName = world.entityName(id), npcPortrait = getPortrait(id) })
+  local portrait = getPortrait(id)
+  if not portrait then return end
+
+  giveItem({ npcName = world.entityName(id), npcPortrait = portrait })
   world.sendEntityMessage(id, "applyStatusEffect", "pat_throwablenpc_despawn")
 
   return true
@@ -24,11 +27,14 @@ function giveItem(params)
 end
 
 function getPortrait(id)
-  local portrait = {}
-  for _, draw in ipairs(world.entityPortrait(id, "full")) do
+  local portrait = world.entityPortrait(id, "full")
+  if not portrait then return end
+
+  local filtered = {}
+  for _, draw in ipairs(portrait) do
     if draw.image and root.nonEmptyRegion(draw.image) then
-      portrait[#portrait + 1] = draw
+      filtered[#filtered + 1] = draw
     end
   end
-  return portrait
+  return filtered
 end
