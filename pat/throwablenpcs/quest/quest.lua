@@ -1,7 +1,6 @@
-local worldId
+local worldId = "InstanceWorld:pat_throwablenpc:-:-"
 
 function init()
-  worldId = ("InstanceWorld:pat_throwablenpc:%s:-"):format(sb.makeUuid())
   quest.setWorldId(worldId)
 end
 
