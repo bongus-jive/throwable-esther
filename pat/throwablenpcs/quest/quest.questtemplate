@@ -8,6 +8,7 @@
   "showFailDialog": false,
   "canBeAbandoned": false,
   "showInLog": true,
+  "ephemeral": true,
 
   "rewards": [ ],
   "moneyRange": [ 0, 0 ],
