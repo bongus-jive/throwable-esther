@@ -1,7 +1,7 @@
 {
   "id": "pat_throwablenpc",
-  "title": "throw npcs",
-  "text": ":3",
+  "title": "Throwable NPCs",
+  "text": "Interact with NPCs to pick them up and throw them.\n\n\n^green;Track Quest^reset; to enable",
 
   "showAcceptDialog": false,
   "showCompleteDialog": false,
@@ -15,5 +15,7 @@
 
   "updateDelta": 0,
   "script": "/pat/throwablenpcs/quest/quest.lua",
-  "scriptConfig": { }
+  "scriptConfig": {
+    "objective": "NPC Thrower active\n^lightgray;Stop Tracking to disable"
+  }
 }

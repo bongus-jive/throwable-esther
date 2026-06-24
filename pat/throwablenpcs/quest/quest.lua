@@ -2,6 +2,9 @@ local worldId = "InstanceWorld:pat_throwablenpc:-:-"
 
 function init()
   quest.setWorldId(worldId)
+
+  local obj = config.getParameter("objective")
+  quest.setObjectiveList({ { obj, false } })
 end
 
 function questInteract(id)
