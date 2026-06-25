@@ -15,7 +15,12 @@ function questInteract(id)
   local portrait = getPortrait(id)
   if not portrait then return end
 
-  giveItem({ npcName = world.entityName(id), npcPortrait = portrait })
+  local name = world.entityName(id)
+  if name:len() == 0 then
+    name = world.entityTypeName(id)
+  end
+
+  giveItem({ npcName = name, npcPortrait = portrait })
   world.sendEntityMessage(id, "applyStatusEffect", "pat_throwablenpc_despawn")
 
   return true
