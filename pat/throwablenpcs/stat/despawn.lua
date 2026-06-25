@@ -4,9 +4,11 @@ function init()
   if t == "npc" then
     world.callScriptedEntity(id, "npc.setDeathParticleBurst")
     world.callScriptedEntity(id, "npc.resetLounging")
+    world.callScriptedEntity(id, "npc.setDropPools", {})
   elseif t == "monster" then
     world.callScriptedEntity(id, "monster.setDeathParticleBurst", "")
     world.callScriptedEntity(id, "monster.setDeathSound", "")
+    world.callScriptedEntity(id, "monster.setDropPool")
   else
     return effect.expire()
   end
