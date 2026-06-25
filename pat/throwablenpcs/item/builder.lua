@@ -10,8 +10,6 @@ function build(_, config, parameters)
     config.animationCustom = sb.jsonMerge(config.animationCustom, drawablesToAnimation(drawables))
   end
 
-  sb.logInfo(sb.printJson(config, 2))
-
   return config, parameters
 end
 
