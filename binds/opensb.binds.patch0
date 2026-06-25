@@ -1,0 +1,8 @@
+{
+  "pat_throwablenpcs": {
+    "name": "^#ff80ce;Throwable NPCs^reset;",
+    "binds": {
+      "toggle": { "name": "Toggle", "default": [ ] }
+    }
+  }
+}
