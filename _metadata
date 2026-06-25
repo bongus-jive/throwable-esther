@@ -7,5 +7,5 @@
   "steamContentId" : "3751241517",
   "steamDescription" : "pick up npcs and throw them and they explode\n\nit gives you a quest that lets you pick up npcs when you interact with them\nand then you can throw them\n\nyou can toggle it by tracking/untracking the quest\n\nalso adds a keybind to quickly toggle it if you use [url=https://github.com/OpenStarbound/OpenStarbound]OpenStarbound[img]https://i.imgur.com/GlY6bda.png[/img][/url]\n\n[img]https://i.imgur.com/wXjYMqP.gif[/img]https://discord.gg/GdsQSgV\n[img]https://i.imgur.com/uyG8oTa.gif[/img]https://www.patreon.com/pathiccstar\n[img]https://i.imgur.com/xVfcRRH.gif[/img]https://ko-fi.com/patmanf\n[img]https://i.imgur.com/jJAj6jF.gif[/img]https://github.com/bongus-jive/throwable-npcs",
   "tags" : "Miscellaneous|NPCs and Creatures|Character Improvements|Mechanics",
-  "version" : "1.0.1"
+  "version" : "1.0.2"
 }
