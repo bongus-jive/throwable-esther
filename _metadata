@@ -1,0 +1,11 @@
+{
+  "author" : "patman",
+  "description" : "pick up npcs and throw them and they explode\n\nit gives you a quest that lets you pick up npcs when you interact with them\nand then you can throw them\n\nyou can toggle it by tracking/untracking the quest",
+  "friendlyName" : "throwable npcs",
+  "link" : "steam://url/CommunityFilePage/3751241517",
+  "name" : "pat_throwablenpcs",
+  "steamContentId" : "3751241517",
+  "steamDescription" : "pick up npcs and throw them and they explode\n\nit gives you a quest that lets you pick up npcs when you interact with them\nand then you can throw them\n\nyou can toggle it by tracking/untracking the quest\n\n[img]https://i.imgur.com/wXjYMqP.gif[/img]https://discord.gg/GdsQSgV\n[img]https://i.imgur.com/uyG8oTa.gif[/img]https://www.patreon.com/pathiccstar\n[img]https://i.imgur.com/xVfcRRH.gif[/img]https://ko-fi.com/patmanf\n[img]https://i.imgur.com/jJAj6jF.gif[/img]https://github.com/bongus-jive/throwable-npcs",
+  "tags" : "Miscellaneous|NPCs and Creatures|Character Improvements|Mechanics",
+  "version" : "1.0"
+}
