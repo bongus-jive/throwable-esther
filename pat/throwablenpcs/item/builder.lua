@@ -10,16 +10,18 @@ function build(_, config, parameters)
     config.animationCustom = sb.jsonMerge(config.animationCustom, drawablesToAnimation(drawables))
   end
 
+  sb.logInfo(sb.printJson(config, 2))
+
   return config, parameters
 end
 
 function drawablesToAnimation(drawables)
-  local parts, tgroups = {}, {}
+  local parts, tgroups = jobject(), jobject()
 
   for i, draw in ipairs(drawables) do
     local props = {}
     local k = tostring(i)
-    parts[k], tgroups[k] = { properties = props }, {}
+    parts[k], tgroups[k] = { properties = props }, jobject()
 
     props.image = draw.image
     props.offset = { draw.position[1] / 8, draw.position[2] / 8 }
